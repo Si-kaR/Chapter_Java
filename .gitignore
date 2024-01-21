@@ -1,0 +1,10 @@
+# ignore all .txt files
+*.txt
+
+# ignore all .pdf files
+*.pdf
+
+# ignore all .class files
+*.class
+
+
