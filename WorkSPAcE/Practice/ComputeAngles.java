@@ -39,7 +39,7 @@ public class ComputeAngles {
         /**
          * Display welcome message to user
          */
-        System.out.println("\nHi There, 👋🫠\nI'll be your CalcBot for the time being.🫠\n🤺 will compute the SIDE_LENGTH  &  ANGLE of your triangle🧘🏼");
+        System.out.println("\nHi There, 👋🫠\nI'll be your 🧮CalcBot🤖🧾 for the time being.🫠\n🤺 will compute the SIDE_LENGTH  &  ANGLE of your triangle🧘🏼");
         
         /**
          * Creating scanner object to take input user input
@@ -78,25 +78,25 @@ public class ComputeAngles {
         System.out.println("\n\nBelow are the LENGTHS of the sides of the triangle based on the coordinates given");
 
         System.out.println("\nComputing Length of Side (a)======================");
-        System.out.printf("     coordinates (x3, y3) = (%f, %f)\n", (x3), (y3));
-        System.out.printf("     coordinates (x2, y2) = (%f, %f)\n", (x2), (y2));
+        System.out.printf("     coordinates (x3, y3) = (%.0f, %.0f)\n", (x3), (y3));
+        System.out.printf("     coordinates (x2, y2) = (%.0f, %.0f)\n", (x2), (y2));
         a = Math.sqrt(((x3-x2)*(x3-x2)) + ((y3-y2)*(y3-y2)));
-        System.out.printf("    •Length Side (a) = %f cm\n", a);
-        System.out.printf("    •Approx_Length Side (a) = %f cm\n", Math.round(a * 100) / 100.0 );
+        System.out.printf("    •Length Side (a) = %.2f cm\n", a);
+        System.out.printf("    •Approx_Length Side (a) = %.2f cm\n", Math.round(a * 100) / 100.0 );
 
         System.out.println("\nComputing Length of Side (b)======================");
-        System.out.printf("     coordinates (x3, y3) = (%f, %f)\n", (x3), (y3));
-        System.out.printf("     coordinates (x1, y1) = (%f, %f)\n", (x1), (y1));
+        System.out.printf("     coordinates (x3, y3) = (%.0f, %.0f)\n", (x3), (y3));
+        System.out.printf("     coordinates (x1, y1) = (%.0f, %.0f)\n", (x1), (y1));
         b = Math.sqrt(((x3-x1)*(x3-x1)) + ((y3-y1)*(y3-y1)));
-        System.out.printf("    •Length Side (b) = %f cm\n", b);
-        System.out.printf("    •Approx_Length Side (b) = %f cm\n", Math.round(b * 100) / 100.0 );
+        System.out.printf("    •Length Side (b) = %.2f cm\n", b);
+        System.out.printf("    •Approx_Length Side (b) = %.2f cm\n", Math.round(b * 100) / 100.0 );
 
         System.out.println("\nComputing Length of Side (c)======================");
-        System.out.printf("     coordinates (x2, y2) = (%f, %f)\n", (x2), (y2));
-        System.out.printf("     coordinates (x1, y1) = (%f, %f)\n", (x1), (y1));
+        System.out.printf("     coordinates (x2, y2) = (%.0f, %.0f)\n", (x2), (y2));
+        System.out.printf("     coordinates (x1, y1) = (%.0f, %.0f)\n", (x1), (y1));
         c = Math.sqrt(((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1)));
-        System.out.printf("    •Length Side (b) = %f cm\n", c);
-        System.out.printf("    •Approx_Length Side (c) = %f cm\n", Math.round(c * 100) / 100.0 );
+        System.out.printf("    •Length Side (b) = %.2f cm\n", c);
+        System.out.printf("    •Approx_Length Side (c) = %.2f cm\n", Math.round(c * 100) / 100.0 );
 
         /**
          * Compute angles A, B, C
@@ -104,31 +104,31 @@ public class ComputeAngles {
         System.out.println("\n\nBelow are the ANGLES between the sides whose length were derived from the cordinats given");
 
         System.out.println("\nComputing Angle <-A-> between Sides (b) & (c)====================");
-        System.out.printf("     Length of Side (a) = %f cm\n", a);
-        System.out.printf("     Length of Side (b) = %f cm\n", b);
-        System.out.printf("     Length of Side (b) = %f cm\n", c);
-        A = Math.toDegrees(Math.acos((a*a)-(b*b)-(c*c))/((-2)*b*c));
-        System.out.printf("    •> Angle <-A-> = %f°\n", A);
-        System.out.printf("    •> Approx_Angle <-A-> = %f°\n", Math.round(A * 100) / 100.0 );
+        System.out.printf("     Length of Side (a) = %.2f cm\n", a);
+        System.out.printf("     Length of Side (b) = %.2f cm\n", b);
+        System.out.printf("     Length of Side (b) = %.2f cm\n", c);
+        A = Math.toDegrees(Math.acos((a * a - b * b - c * c) / (-2 * b * c)));
+        System.out.printf("    <•> Angle <-A-> = %.2f°\n", A);
+        System.out.printf("    <•> Approx_Angle <-A-> = %.2f°\n", A);
 
         System.out.println("\nComputing Angle <-B-> between Sides (a) & (c)====================");
-        System.out.printf("     Length of Side (a) = %f cm\n", a);
-        System.out.printf("     Length of Side (b) = %f cm\n", b);
-        System.out.printf("     Length of Side (b) = %f cm\n", c);
-        B = Math.toDegrees(Math.acos((b*b)-(a*a)-(c*c))/((-2)*a*c));
-        System.out.printf("    •> Angle <-B-> = %f°\n", B);
-        System.out.printf("    •> Approx_Angle <-B-> = %f°\n", Math.round(B * 100) / 100.0 );
+        System.out.printf("     Length of Side (a) = %.2f cm\n", a);
+        System.out.printf("     Length of Side (b) = %.2f cm\n", b);
+        System.out.printf("     Length of Side (b) = %.2f cm\n", c);
+        B = Math.toDegrees(Math.acos((b * b - a * a - c * c) / (-2 * a * c)));
+        System.out.printf("    <•> Angle <-B-> = %.2f°\n", B);
+        System.out.printf("    <•> Approx_Angle <-B-> = %.2f°\n", B);
 
         System.out.println("\nComputing Angle <-C-> between Sides (a) & (b)====================");
-        System.out.printf("     Length of Side (a) = %f cm\n", a);
-        System.out.printf("     Length of Side (b) = %f cm\n", b);
-        System.out.printf("     Length of Side (b) = %f cm\n", c);
-        C = Math.toDegrees(Math.acos((c*c)-(b*b)-(a*a))/((-2)*a*b));
-        System.out.printf("    •> Angle <-C-> = %f°\n", C);
-        System.out.printf("    •> Approx_Angle <-C-> = %f°\n", Math.round(C * 100) / 100.0 );
+        System.out.printf("     Length of Side (a) = %.2f cm\n", a);
+        System.out.printf("     Length of Side (b) = %.2f cm\n", b);
+        System.out.printf("     Length of Side (b) = %.2f cm\n", c);
+        C = Math.toDegrees(Math.acos((c*c - b*b - a*a) / (-2*a*b)));
+        System.out.printf("    <•> Angle <-C-> = %.2f°\n", C);
+        System.out.printf("    <•> Approx_Angle <-C-> = %.2f°\n", C);
 
 
-        System.out.println("\n\nThank me for my math stuff!\nBuy me ☕NesCaFe\n👋🫠\n");
+        System.out.println("\n\nThank me for my math stuff!\nBuy me ☕NesCaFe!\n👋🫠\n");
 
         inputKeys.close();
 
